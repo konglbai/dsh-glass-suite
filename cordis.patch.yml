@@ -1,0 +1,12 @@
+# dsh-glass-suite — bundle patch
+#
+# Declared through package.json:
+#   "dsh": { "bundle": { "patch": "./cordis.patch.yml" } }
+#
+# Loading this package as a profile layer registers its plugin row automatically,
+# so do not also hand-write an `- insert:` row for this package in a profile's
+# own cordis.patch.yml.
+
+- insert:
+    - id: glass-suite
+      name: 'dsh-glass-suite'
